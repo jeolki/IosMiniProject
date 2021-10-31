@@ -1,1 +1,1 @@
-# ios_toy_project
+# ios_mini_project
