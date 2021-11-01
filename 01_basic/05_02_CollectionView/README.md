@@ -6,7 +6,7 @@
 
 <img src="./images/CollectionView_01.png" />
 
-`tableView`는 리스트 형태로만 사용이 가능하지만 `collectionView`는 리스트 형태뿐만 아니라 슬라이드와 같이 다양한 형태로도 사용이 가능합니다.
+`tableView`는 리스트 형태로만 사용이 가능하지만 `collectionView`는 리스트 형태뿐만 아니라 슬라이드와 같이 다양한 형태로도 사용이 가능합니다.  
 
 
 
@@ -26,7 +26,7 @@
 
 ## 3. CollectionView Latouts
 
-CollectionView는 레이아웃 객체를 통해 컬렉션 뷰 내의 아이템 배치 및 시각적 스타일을 결정합니다.
+CollectionView는 레이아웃 객체를 통해 컬렉션 뷰 내의 아이템 배치 및 시각적 스타일을 결정합니다.  
 
 
 
@@ -42,7 +42,7 @@ class UICollectionViewLayout : NSObject
 
 layout 객체가 하는 일은 cell, supplementary view, 그리고 collection view의 바운드 내부에 있는 데코레이션 뷰(decoration view)의 위치를 결정하는 것이며 요청을 하면 위 정보들을 **collection view**에게 전달한다.
 
-**사용하기 위해서는 `UICollectionViewLayout`을 서브클래싱 해야한다.** 그러나 서브클래싱을 하기 전, `UIColelctionViewFlowLayout` 클래스를 보고 레이아웃 요구에 맞게 조정할 수 있는지 확인해야한다.
+**사용하기 위해서는 `UICollectionViewLayout`을 서브클래싱 해야한다.** 그러나 서브클래싱을 하기 전, `UIColelctionViewFlowLayout` 클래스를 보고 레이아웃 요구에 맞게 조정할 수 있는지 확인해야한다.   
 
 
 
@@ -78,19 +78,19 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 4. 섹션에 header와 footer가 있다면 이것들의 크기를 지정합니다
 
-5. 레이아웃의 스크롤 방향을 설정합니다.
+5. 레이아웃의 스크롤 방향을 설정합니다.  
 
    
 
 <img src="./images/CollectionView_06.png" />
 
-셀의 행과 열사이의 간격을 설정할 수 있습니다. 셀들의 크기가 같으면 최소로 설정한 간격을 지킬수 있지만 셀들의 크기가 다르면 실제간격이 다를 수 있습니다. 
+셀의 행과 열사이의 간격을 설정할 수 있습니다. 셀들의 크기가 같으면 최소로 설정한 간격을 지킬수 있지만 셀들의 크기가 다르면 실제간격이 다를 수 있습니다.   
 
 
 
 <img src="./images/CollectionView_07.png" />
 
-셀과 행간의 간격이외에도 섹션자체의 공간을 줄 수 있습니다 `UIEdgeInsetsMake` 메서드를 사용하여 top, left, bottom. right의 공간을 줄 수 있습니다.
+셀과 행간의 간격이외에도 섹션자체의 공간을 줄 수 있습니다 `UIEdgeInsetsMake` 메서드를 사용하여 top, left, bottom. right의 공간을 줄 수 있습니다.  
 
 
 
@@ -108,7 +108,7 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 - cellForItemAt : 컬렉션뷰의 지정된 위치에 표시할 셀을 요청하는 메서드
 - numberOfSections : 섹션의 개수를 묻는 메서드
 
-옵셔널이 아닌 메서드는 필수로 구현해야 합니다.
+옵셔널이 아닌 메서드는 필수로 구현해야 합니다.  
 
 
 
@@ -118,10 +118,10 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 콘텐츠의 표현, 사용자와의 상호작용과 관련된 것들을 관리하는 객체입니다.
 
-데이터 소스와 다르게 필수로 구현하지 않아도 됩니다.
+데이터 소스와 다르게 필수로 구현하지 않아도 됩니다.  
 
  <img src="./images/CollectionView_09.png" />
 
-`Collection view`는 `Data source`에서 보여줄 `Cell`에대한 정보를 가져오고 `layout`객체에서 해당셀이속하는 위치를 결정하고 하나이상의 `layout attribute`객체로 `Collection view`에 전송을합니다.
+`Collection view`는 `Data source`에서 보여줄 `Cell`에대한 정보를 가져오고 `layout`객체에서 해당셀이속하는 위치를 결정하고 하나이상의 `layout attribute`객체로 `Collection view`에 전송을합니다.  
 
 그런다음 `Collection view`는 레이아웃정보를 실제 셀이나 다른뷰들과 결합하여 최종적으로 사용자에게 보여주게 됩니다.
