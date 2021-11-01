@@ -12,7 +12,7 @@
 
 앱의 근간을 이루는 객체로 모든 앱은 최소한 하나 이상의 뷰 컨트롤러를 가지고 있습니다.
 
-![UiViewController](./images/UIViewController_02.png){: width="100" height="200"}  
+![UiViewController](./images/UIViewController_02.png)  
 
 한마디로 사용자가 화면을 보는것에 대한 관리기능을 제공하는 것입니다. 그림과 같은 화면이 ViewController라고 생각하시면 됩니다
 
