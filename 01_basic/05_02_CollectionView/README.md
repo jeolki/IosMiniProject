@@ -10,6 +10,8 @@
 
 
 
+
+
 ## 2. UICollectionView의 구성요소
 
 <img src="./images/CollectionView_02.png" />
@@ -20,9 +22,13 @@
 
 
 
+
+
 ## 3. CollectionView Latouts
 
 CollectionView는 레이아웃 객체를 통해 컬렉션 뷰 내의 아이템 배치 및 시각적 스타일을 결정합니다.
+
+
 
 ### 1) UICollectionViewLayout
 
@@ -88,6 +94,8 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 
 
+
+
 ## 4. UICollectionViewDataSource
 
 컬렉션 뷰로 보여지는 콘텐츠들을 관리하는 객체입니다.
@@ -101,6 +109,8 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 - numberOfSections : 섹션의 개수를 묻는 메서드
 
 옵셔널이 아닌 메서드는 필수로 구현해야 합니다.
+
+
 
 
 
