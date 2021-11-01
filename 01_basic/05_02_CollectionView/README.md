@@ -10,7 +10,7 @@
 
 ​    
 
-
+​    
 
 ## 2. UICollectionView의 구성요소
 
@@ -20,15 +20,15 @@
 - `Supplementary View`: 데이터를 의미하지만 cell과는 다르다. Supplementary view는 사용자에 의해 선택될 수 없습니다. 대신 supplementary view를 특정 섹션 또는 전체 collection view의 header와 footer 구현하기 위해 사용할 수 있습니다. Supplementary view는 선택적이며 사용하고 배치하는 일은 layout 객체가 처리합니다.
 - `Decoration View`: 선택될 수 없는 장식품이며 본질적으로 collection view의 데이터와 연관이 없습니다. Decoration view는 supplementary view의 다른 타입입니다. supplementary view처럼, 선택적이며 사용하고 배치하는 일은 layout 객체가 처리합니다.
 
+​    
 
-
-   
+​     
 
 ## 3. CollectionView Latouts
 
 CollectionView는 레이아웃 객체를 통해 컬렉션 뷰 내의 아이템 배치 및 시각적 스타일을 결정합니다.  
 
-​    
+​       
 
 ### 1) UICollectionViewLayout
 
@@ -45,6 +45,8 @@ layout 객체가 하는 일은 cell, supplementary view, 그리고 collection vi
 **사용하기 위해서는 `UICollectionViewLayout`을 서브클래싱 해야한다.** 그러나 서브클래싱을 하기 전, `UIColelctionViewFlowLayout` 클래스를 보고 레이아웃 요구에 맞게 조정할 수 있는지 확인해야한다.   
 
    
+
+​    
 
 ### 2) UICollectionViewFlowLayout
 
@@ -92,9 +94,9 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 셀과 행간의 간격이외에도 섹션자체의 공간을 줄 수 있습니다 `UIEdgeInsetsMake` 메서드를 사용하여 top, left, bottom. right의 공간을 줄 수 있습니다.  
 
-   
+​    
 
-
+​    
 
 ## 4. UICollectionViewDataSource
 
@@ -110,9 +112,9 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 옵셔널이 아닌 메서드는 필수로 구현해야 합니다.  
 
-   
+​    
 
-
+​    
 
 ## 5. UICollectionViewDelegate
 
