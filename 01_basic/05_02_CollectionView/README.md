@@ -8,7 +8,7 @@
 
 `tableView`는 리스트 형태로만 사용이 가능하지만 `collectionView`는 리스트 형태뿐만 아니라 슬라이드와 같이 다양한 형태로도 사용이 가능합니다.  
 
-
+​    
 
 
 
@@ -22,13 +22,13 @@
 
 
 
-
+   
 
 ## 3. CollectionView Latouts
 
 CollectionView는 레이아웃 객체를 통해 컬렉션 뷰 내의 아이템 배치 및 시각적 스타일을 결정합니다.  
 
-
+​    
 
 ### 1) UICollectionViewLayout
 
@@ -44,7 +44,7 @@ layout 객체가 하는 일은 cell, supplementary view, 그리고 collection vi
 
 **사용하기 위해서는 `UICollectionViewLayout`을 서브클래싱 해야한다.** 그러나 서브클래싱을 하기 전, `UIColelctionViewFlowLayout` 클래스를 보고 레이아웃 요구에 맞게 조정할 수 있는지 확인해야한다.   
 
-
+   
 
 ### 2) UICollectionViewFlowLayout
 
@@ -80,19 +80,19 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 5. 레이아웃의 스크롤 방향을 설정합니다.  
 
-   
+      
 
 <img src="./images/CollectionView_06.png" />
 
 셀의 행과 열사이의 간격을 설정할 수 있습니다. 셀들의 크기가 같으면 최소로 설정한 간격을 지킬수 있지만 셀들의 크기가 다르면 실제간격이 다를 수 있습니다.   
 
-
+   
 
 <img src="./images/CollectionView_07.png" />
 
 셀과 행간의 간격이외에도 섹션자체의 공간을 줄 수 있습니다 `UIEdgeInsetsMake` 메서드를 사용하여 top, left, bottom. right의 공간을 줄 수 있습니다.  
 
-
+   
 
 
 
@@ -110,7 +110,7 @@ Flow layout의 각 섹션은 자신의 커스텀 header와 footer를 가질 수 
 
 옵셔널이 아닌 메서드는 필수로 구현해야 합니다.  
 
-
+   
 
 
 
