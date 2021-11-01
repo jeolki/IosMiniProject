@@ -39,3 +39,11 @@ View간의 정렬을 설정할 수 있는 메뉴입니다. 정렬 제약조건�
 ![AutoLayout_05](./images/AutoLayout_05.png)
 
 AutoLayout 제약조건의 Issue를 해결할 수 있습니다. 
+
+
+
+## 6. IBAction & IBOutlet
+
+이 둘의 역할은 StoryBoard와의 연결고리를 담당합니다. 변수나 함수를 정의할 때 앞에 @IBAction 또는 @IBOutlet 키워드를 통해 StoryBoard에서 버튼이나 레이블같은 컴포넌트와 연결이 가능합니다.
+
+IBAction은 Event가 일어난 경우 호출되는 Action을 정의해둔 것이고, IBOutlet은 값에 접근하기위한 변수라고 보면 됩니다.
