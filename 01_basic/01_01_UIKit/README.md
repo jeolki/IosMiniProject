@@ -10,7 +10,7 @@
 
 ## 2. UIKit
 
-![UIKit_02](/./Images/UIKit_02.png)
+![UIKit_02](./Images/UIKit_02.png)
 
 - 사용자의 인터페이스를 관리하고 이벤트를 처리하는 것이 주 목적인 Framework
 - 사용자 이벤트와 어플리케이션의 화면을 구성하는 요소를 포함하고 있습니다.
