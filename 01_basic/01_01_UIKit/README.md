@@ -1,6 +1,6 @@
 ## 1. Cocoa touch Framework
 
-![UIKit](./Images/UIKit_01.png)
+![UIKit](./images/UIKit_01.png)
 
 - IOS 개발환경을 구축하기 위한 최상위 프레임워크, 일반적으로 Objc-c 혹은 Swift 에서 사용되는 UI킷 Foundation등 대부분의 클래스 객체들이 모두 포함된다고 생각하면 됩니다.
 
@@ -10,7 +10,7 @@
 
 ## 2. UIKit
 
-![UIKit_02](./Images/UIKit_02.png)
+![UIKit_02](./images/UIKit_02.png)
 
 - 사용자의 인터페이스를 관리하고 이벤트를 처리하는 것이 주 목적인 Framework
 - 사용자 이벤트와 어플리케이션의 화면을 구성하는 요소를 포함하고 있습니다.
@@ -20,7 +20,7 @@
 
 ## 3. Code Structure of a UIKit App
 
-![UIKit_03](./Images/UIKit_03.png)
+![UIKit_03](./images/UIKit_03.png)
 
 - 기본적으로 MVC 패턴을 사용합니다
 - `Model` : 앱의 데이터와 비즈니스로직을 가지고 있습니다
@@ -31,7 +31,7 @@
 
 ## 4. 현실 MVC
 
-![UIKit_04](./Images/UIKit_04.png)
+![UIKit_04](./images/UIKit_04.png)
 
 - 현실의 MVC 패턴은 View와 Controller가 강하게 연결되어있어 거의 모든일을 담당합니다.
 - 프로젝트가 거대해 질수록 Controller가 비대해지고 내부구조는 복잡하게 되어 유지보수가 힘들어지는 상황이 됩니다.
