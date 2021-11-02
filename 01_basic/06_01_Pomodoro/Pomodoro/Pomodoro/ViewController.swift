@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 enum TimerStatus {
     case start
@@ -65,14 +66,25 @@ class ViewController: UIViewController {
             self.timer = DispatchSource.makeTimerSource(flags: [], queue: .main)
             // 바로 시작 now, 3초뒤는 now() + 3 / 1초마다
             self.timer?.schedule(deadline: .now(), repeating: 1)
-            self.timer?.setEventHandler(handler: {
+            self.timer?.setEventHandler(handler: { [weak self] in
                 // 1초 한번식 handler closer의 코드 실행 된다: 1식 감소
-                [weak self] in self?.currentSeconds -= 1
-                debugPrint(self?.currentSeconds)
+                guard let self = self else { return }
+                self.currentSeconds -= 1
+                let hour = self.currentSeconds / 3600
+                let minutes = (self.currentSeconds % 3600 ) / 60
+                let seconds = (self.currentSeconds % 3600 ) % 60
                 
-                if self?.currentSeconds ?? 0 <= 0 {
+                self.timerLabel.text = String(format: "%02d:%02d:%02d", hour, minutes, seconds)
+                
+                self.progressView.progress = Float(self.currentSeconds) / Float(self.duration)
+                //debugPrint(self.progressView.progress)
+                
+                if self.currentSeconds <= 0 {
                     // 타이머가 종료
-                    self?.stopTimer()
+                    self.stopTimer()
+                    
+                    // 종료소리 https://iphonedev.wiki/index.php/AudioServices
+                    AudioServicesPlaySystemSound(1005)
                 }
             })
             self.timer?.resume()
@@ -82,7 +94,7 @@ class ViewController: UIViewController {
     // 타이머 종료
     func stopTimer() {
         if self.timerStatus == .pause {
-            // 일시정지 후 취소 버튼 클릭시 에러발생 -> resume() 으로 해결 
+            // 일시정지 후 취소 버튼 클릭시 에러발생 -> resume() 으로 해결
             self.timer?.resume()
         }
         self.timerStatus = .end
