@@ -4,9 +4,11 @@ iOS 및 macOS, tvOS 등 애플 플랫폼에서 개발을 할 때, 외부 라이�
 
 애플 플랫폼에서 사용할 수 있는 의존성 관리 도구의 대표적인 예로는 [[CocoaPods](https://cocoapods.org/)], [[Carthage](https://github.com/Carthage/Carthage)], [[Swift Package Manager](https://swift.org/package-manager/)] 등이 있습니다.
 
-   
+​     
 
-   
+​     
+
+​     
 
 ### CocoaPods install
 
