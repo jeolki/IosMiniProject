@@ -5,11 +5,15 @@
 
 
 
+​    
+
 ## 2. Hyper Text Transfer Protocol
 
 Hyper Text를 전송하기 위한 프로토콜
 
 
+
+​       
 
 ## 3. Http 통신
 
@@ -17,7 +21,7 @@ Hyper Text를 전송하기 위한 프로토콜
 
 기본적으로 `request` 와 `response`로 구성되어있습니다. 기본적으로 서버와 클라이언트가 연결되어 있지 않습니다. 서버는 요청한 정보를 전송하고 연결을 종료시킨다는 것을 의미합니다.
 
-<img src="./images/URLSession_02.png" />
+<img src="./images/URLSession_02.png" width="50%"/>
 
 계속 연결되어 있지 않다는것이 Http 통신의 특징입니다.
 
