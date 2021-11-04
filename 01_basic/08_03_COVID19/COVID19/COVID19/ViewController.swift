@@ -15,12 +15,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalCaseLabel: UILabel!
     @IBOutlet weak var newCaseLabel: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var labelStackView: UIStackView!
+    
+    // 서버에서 응답이 오기전에 표시
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.indicatorView.startAnimating()
         self.fetchCovidOverview(completionHandler: { [weak self] result in
             guard let self = self else { return }
+            
+            // 응답전 애니메이션
+            self.indicatorView.stopAnimating()
+            self.indicatorView.isHidden = true
+            self.labelStackView.isHidden = false
+            self.pieChartView.isHidden = false
+            
             switch result {
             case let .success(result):
                 //debugPrint("success \(result)")
@@ -56,6 +68,8 @@ class ViewController: UIViewController {
     }
     
     func configureChatView(covidOverViewList: [CovidOverview]) {
+        self.pieChartView.delegate = self
+        
         let entries = covidOverViewList.compactMap { [weak self] overview -> PieChartDataEntry? in
             guard let self = self else { return nil }
             return PieChartDataEntry(
@@ -130,3 +144,14 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: ChartViewDelegate {
+    
+    // chart에서 항목을 선택했을때 호출
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let covidDetailViewController = self.storyboard?.instantiateViewController(identifier: "CovidDetailViewController") as? CovidDetailViewController else { return }
+        guard let covidOverview = entry.data as? CovidOverview else { return }
+        covidDetailViewController.covidOverview = covidOverview
+        self.navigationController?.pushViewController(covidDetailViewController, animated: true)
+    }
+    
+}
