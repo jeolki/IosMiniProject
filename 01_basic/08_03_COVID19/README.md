@@ -23,5 +23,5 @@
 
 |                 전체 차트 화면                  |                 상세 보기 화면                  |
 | :---------------------------------------------: | :---------------------------------------------: |
-| <img src="./images/Covid19_01.png" width="40%"> | <img src="./images/COVID19_02.png" width="40%"> |
+| <img src="./images/COVID19_01.png" width="40%"> | <img src="./images/COVID19_02.png" width="40%"> |
 
