@@ -36,7 +36,18 @@ class MainViewController: UIViewController {
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         
-        self.navigationController?.popToRootViewController(animated: true)
+        // 로그아웃
+        let firebaseAuth = Auth.auth()
+        
+        // 에러 처리를 위한 throw 함수 이기때문에 do catch
+        do {
+            try firebaseAuth.signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            // 에러발생
+            print("ERROR: signout \(signOutError.localizedDescription)")
+        }
+        
         
     }
 }
