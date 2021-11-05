@@ -77,6 +77,7 @@
 		D6A024012733B185002CC690 /* SpotifyLoginSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D6A0241E2733C4FC002CC690 /* GoogleService-Info.plist */,
 				D6A024022733B185002CC690 /* AppDelegate.swift */,
 				D6A024042733B185002CC690 /* SceneDelegate.swift */,
 				D6A024082733B185002CC690 /* Main.storyboard */,
@@ -86,7 +87,6 @@
 				D6A024162733B1FD002CC690 /* LoginViewController.swift */,
 				D6A024182733B90D002CC690 /* EnterEmailViewController.swift */,
 				D6A0241C2733C052002CC690 /* MainViewController.swift */,
-				D6A0241E2733C4FC002CC690 /* GoogleService-Info.plist */,
 			);
 			path = SpotifyLoginSampleApp;
 			sourceTree = "<group>";
@@ -97,7 +97,6 @@
 				0AE52A15CF109CF7A62AF15F /* Pods-SpotifyLoginSampleApp.debug.xcconfig */,
 				6DB124C8F82CA377E2AAC6BE /* Pods-SpotifyLoginSampleApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

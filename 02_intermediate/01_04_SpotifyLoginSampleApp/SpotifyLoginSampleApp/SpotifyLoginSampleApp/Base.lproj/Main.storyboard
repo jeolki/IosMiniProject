@@ -71,7 +71,7 @@
                                             <segue destination="AIz-F1-xbV" kind="show" id="imB-h8-U12"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-TG-vSR">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-TG-vSR" customClass="GIDSiginInButton">
                                         <rect key="frame" x="0.0" y="75" width="354" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="q83-hA-Nnn"/>

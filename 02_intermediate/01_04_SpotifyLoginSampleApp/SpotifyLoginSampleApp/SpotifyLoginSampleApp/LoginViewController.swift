@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     
     override func viewDidLoad() {
@@ -29,15 +32,39 @@ class LoginViewController: UIViewController {
         
         // Navigation Bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        
     }
     
-    @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
-        // Firebase 인증
+    @IBAction func googleLoginButtonTapped(_ sender: Any) {
+        // Firebase 인증정보를 가져온다
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        
+        let signInconfig = GIDConfiguration.init(clientID: clientID)
+        
+        GIDSignIn.sharedInstance.signIn(with: signInconfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            guard let authentication = user?.authentication else { return }
+            let crdential = GoogleAuthProvider.credential(withIDToken: authentication.idToken!, accessToken: authentication.accessToken)
+            // access token 부여 받음
+            
+            // Firebase 인증정보 등록
+            Auth.auth().signIn(with: crdential) {_, _ in
+                // token을 넘겨주면, 성공했는지 안했는지에 대한 result값과 error값을 넘겨준다
+                self.showMainViewController()
+            }
+        }
         
     }
     
     @IBAction func appLoginButtonTapped(_ sender: UIButton) {
     }
     
+    private func showMainViewController() {
+           let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+           let mainViewController = storyboard.instantiateViewController(identifier: "MainViewController")
+           mainViewController.modalPresentationStyle = .fullScreen
+           
+           UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+       }
     
 }
