@@ -11,6 +11,7 @@ import FirebaseAuth
 class MainViewController: UIViewController {
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var resetPasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,10 @@ class MainViewController: UIViewController {
         \(email)님
         """
         
+        // 소셜로그인일 경우 비밀번호 변경 숨기기
+        let isEmailSignIn = Auth.auth().currentUser?.providerData[0].providerID == "password"
+        resetPasswordButton.isHidden = !isEmailSignIn
+        
     }
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
@@ -47,7 +52,15 @@ class MainViewController: UIViewController {
             // 에러발생
             print("ERROR: signout \(signOutError.localizedDescription)")
         }
+
+    }
+    
+    @IBAction func resetPasswordButtonTapped(_ sender: UIButton) {
         
-        
+        // 이메일로 비밀번호 변경보내기
+        let email = Auth.auth().currentUser?.email ?? ""
+        Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
+    
+    
     }
 }

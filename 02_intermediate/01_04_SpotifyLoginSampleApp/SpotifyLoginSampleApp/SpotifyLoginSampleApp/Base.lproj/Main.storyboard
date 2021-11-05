@@ -237,8 +237,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-g7-ZPc">
+                                <rect key="frame" x="154" y="490.5" width="106" height="32"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="REA-Fb-yLl" eventType="touchUpInside" id="Wjc-H1-CgV"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQi-0v-nBN">
-                                <rect key="frame" x="146.5" y="488" width="121" height="48"/>
+                                <rect key="frame" x="146.5" y="542.5" width="121" height="48"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그아웃">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
@@ -252,13 +263,16 @@
                         <viewLayoutGuide key="safeArea" id="Gt6-CG-gNC"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oQi-0v-nBN" firstAttribute="top" secondItem="uSN-g7-ZPc" secondAttribute="bottom" constant="20" id="1Eb-0J-jii"/>
                             <constraint firstItem="9qP-4z-g0K" firstAttribute="centerX" secondItem="Gt6-CG-gNC" secondAttribute="centerX" id="Fb5-h6-x9I"/>
-                            <constraint firstItem="oQi-0v-nBN" firstAttribute="centerX" secondItem="Gt6-CG-gNC" secondAttribute="centerX" id="ZyD-20-Uub"/>
-                            <constraint firstItem="oQi-0v-nBN" firstAttribute="top" secondItem="9qP-4z-g0K" secondAttribute="bottom" constant="20" id="nD6-Os-0HL"/>
+                            <constraint firstItem="oQi-0v-nBN" firstAttribute="centerX" secondItem="9qP-4z-g0K" secondAttribute="centerX" id="H0s-j2-nuu"/>
+                            <constraint firstItem="uSN-g7-ZPc" firstAttribute="centerX" secondItem="9qP-4z-g0K" secondAttribute="centerX" id="Ifg-8z-kTf"/>
                             <constraint firstItem="9qP-4z-g0K" firstAttribute="centerY" secondItem="Gt6-CG-gNC" secondAttribute="centerY" id="q6f-DV-Pmb"/>
+                            <constraint firstItem="uSN-g7-ZPc" firstAttribute="firstBaseline" secondItem="9qP-4z-g0K" secondAttribute="baseline" constant="50" id="vnq-5H-cGX"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="uSN-g7-ZPc" id="FjJ-10-SQy"/>
                         <outlet property="welcomeLabel" destination="9qP-4z-g0K" id="Atn-2Q-eht"/>
                     </connections>
                 </viewController>
