@@ -7,8 +7,11 @@
 
 import UIKit
 import Kingfisher
+import FirebaseDatabase
 
 class CardListViewController: UITableViewController {
+    
+    var ref: DatabaseReference! // Firebase Realtime Database
     
     var creditCardList: [CreditCard] = []
     
@@ -18,6 +21,29 @@ class CardListViewController: UITableViewController {
         // UITabelView Cell Register
         let nibName = UINib(nibName: "CardListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "CardListCell")
+        
+        // 데이터베이스의 흐름을 주고받음
+        ref = Database.database().reference()
+        
+        ref.observe(.value) { snapshot in
+            guard let value = snapshot.value as? [String: [String: Any]] else { return }
+            
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: value)
+                let cardData = try JSONDecoder().decode([String: CreditCard].self, from: jsonData)
+                let cardList = Array(cardData.values)
+                self.creditCardList = cardList.sorted { $0.rank < $1.rank }
+                
+                // 유아이설정 메인스레드에서 작동해야한다.
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            } catch let error {
+                print("ERROR JSON parsing \(error.localizedDescription)")
+            }
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,9 +74,50 @@ class CardListViewController: UITableViewController {
         
         detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
         self.show(detailViewController, sender: nil)
+        
+        // Option1 선택시 실시간으로 값을 넣는 방법 경로를 알때.
+        let cardID = creditCardList[indexPath.row].id
+        ref.child("Item\(cardID)/isSelected").setValue(true)
+        
+        // Option2 경로를 모를때
+        /*
+        ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) { [weak self] snapshot in
+            guard let self = self,
+                  let value = snapshot.value as? [String: [String: Any]],
+                  let key = value.keys.first else { return }
+            
+            self.ref.child("\(key)/isSelected").setValue(true)
+        }
+        */
+        
+        // setValue 에 nil을 넣으면 삭제와 같다.
     }
     
+    // 스와이프 삭제
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            // Option1
+            let cardID = creditCardList[indexPath.row].id
+            ref.child("Item\(cardID)").removeValue()
+            
+            // Option2 경로를 모를때 검색 후 삭제
+            /*
+            ref.queryOrdered(byChild: "id").queryEqual(toValue: cardID).observe(.value) {
+                [weak self] snapshot in
+                guard let self = self,
+                      let value = snapshot.value as? [String: [String: Any]],
+                      let key = value.keys.first else { return }
+                
+                self.ref.child(key).removeValue()
+            }
+             */
+            
+        }
+    }
     
 }

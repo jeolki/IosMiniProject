@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class CardDetaillViewController: UIViewController {
+class CardDetailViewController: UIViewController {
     
     var promotionDetail: PromotionDetail?
     
