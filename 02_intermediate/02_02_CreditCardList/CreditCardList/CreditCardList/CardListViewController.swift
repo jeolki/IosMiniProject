@@ -7,11 +7,15 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 import FirebaseDatabase
+import FirebaseFirestoreSwift
 
 class CardListViewController: UITableViewController {
     
-    var ref: DatabaseReference! // Firebase Realtime Database
+//    var ref: DatabaseReference! // Firebase Realtime Database
+    
+    var db = Firestore.firestore()
     
     var creditCardList: [CreditCard] = []
     
@@ -22,25 +26,51 @@ class CardListViewController: UITableViewController {
         let nibName = UINib(nibName: "CardListCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "CardListCell")
         
+        // 실시간 데이터베이스 읽기
         // 데이터베이스의 흐름을 주고받음
-        ref = Database.database().reference()
+//        ref = Database.database().reference()
+//
+//        ref.observe(.value) { snapshot in
+//            guard let value = snapshot.value as? [String: [String: Any]] else { return }
+//
+//            do {
+//                let jsonData = try JSONSerialization.data(withJSONObject: value)
+//                let cardData = try JSONDecoder().decode([String: CreditCard].self, from: jsonData)
+//                let cardList = Array(cardData.values)
+//                self.creditCardList = cardList.sorted { $0.rank < $1.rank }
+//
+//                // 유아이설정 메인스레드에서 작동해야한다.
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//
+//            } catch let error {
+//                print("ERROR JSON parsing \(error.localizedDescription)")
+//            }
+//        }
         
-        ref.observe(.value) { snapshot in
-            guard let value = snapshot.value as? [String: [String: Any]] else { return }
+        // Firestore 읽기
+        db.collection("creditCardList").addSnapshotListener { snapshot, error in
+            guard let documents = snapshot?.documents else {
+                print("ERROR Firestore fetching document \(String(describing: error))")
+                return
+            }
             
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: value)
-                let cardData = try JSONDecoder().decode([String: CreditCard].self, from: jsonData)
-                let cardList = Array(cardData.values)
-                self.creditCardList = cardList.sorted { $0.rank < $1.rank }
-                
-                // 유아이설정 메인스레드에서 작동해야한다.
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+            // compatMap 을 쓴 이유 nil값을 반환시 배열안에 넣지 않기 위해서
+            self.creditCardList = documents.compactMap { doc -> CreditCard? in
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: doc.data(), options: [])
+                    let creditCard = try JSONDecoder().decode(CreditCard.self, from: jsonData)
+                    return creditCard
+                } catch let error {
+                    print("ERROR JSON Parsing \(error)")
+                    return nil
                 }
-                
-            } catch let error {
-                print("ERROR JSON parsing \(error.localizedDescription)")
+            }.sorted{ $0.rank < $1.rank }
+            
+            // 메인 스레드에서 돌아가도록 처리
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
         
@@ -75,9 +105,10 @@ class CardListViewController: UITableViewController {
         detailViewController.promotionDetail = creditCardList[indexPath.row].promotionDetail
         self.show(detailViewController, sender: nil)
         
+        // 실시간 데이터베이스 쓰기
         // Option1 선택시 실시간으로 값을 넣는 방법 경로를 알때.
-        let cardID = creditCardList[indexPath.row].id
-        ref.child("Item\(cardID)/isSelected").setValue(true)
+//        let cardID = creditCardList[indexPath.row].id
+//        ref.child("Item\(cardID)/isSelected").setValue(true)
         
         // Option2 경로를 모를때
         /*
@@ -91,6 +122,22 @@ class CardListViewController: UITableViewController {
         */
         
         // setValue 에 nil을 넣으면 삭제와 같다.
+        
+        // Firestore 쓰기
+        // Option1 경로를 알고 있을 때
+        let cardID = creditCardList[indexPath.row].id
+//        db.collection("creditCardList").document("card\(cardID)").updateData(["isSelected": true])
+        
+        // Option2 경로를 모를 때 : id와 같은 고유값으로 문서를 검색후 결과로 업데이트
+        db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments { snapshot, _ in
+            guard let document = snapshot?.documents.first else {
+                print("ERROR Firestore fetch document")
+                return
+            }
+            
+            document.reference.updateData(["isSelected": true])
+            
+        }
     }
     
     // 스와이프 삭제
@@ -101,9 +148,10 @@ class CardListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
+            // 실시간 데이터베이스 삭제
             // Option1
-            let cardID = creditCardList[indexPath.row].id
-            ref.child("Item\(cardID)").removeValue()
+//            let cardID = creditCardList[indexPath.row].id
+//            ref.child("Item\(cardID)").removeValue()
             
             // Option2 경로를 모를때 검색 후 삭제
             /*
@@ -116,6 +164,21 @@ class CardListViewController: UITableViewController {
                 self.ref.child(key).removeValue()
             }
              */
+            
+            // Firestore 삭제
+            // Option1 경로를 알때
+            let cardID = creditCardList[indexPath.row].id
+//            db.collection("creditCardList").document("card\(cardID)").delete()
+            
+            // Option2 경로를 모를때
+            db.collection("creditCardList").whereField("id", isEqualTo: cardID).getDocuments{ snapshot, _ in
+                guard let document = snapshot?.documents.first else {
+                    print("ERROR")
+                    return
+                }
+                
+                document.reference.delete()
+            }
             
         }
     }
