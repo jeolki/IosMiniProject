@@ -20,6 +20,7 @@
 		D6698D632737F6780018AF7E /* money.json in Resources */ = {isa = PBXBuildFile; fileRef = D6698D622737F6780018AF7E /* money.json */; };
 		D6698D67273825210018AF7E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6698D66273825210018AF7E /* GoogleService-Info.plist */; };
 		D6698D6927382C4A0018AF7E /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6698D6827382C4A0018AF7E /* CardDetailViewController.swift */; };
+		D67F3F9D273A434A00CA4DAE /* CreditCardDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67F3F9C273A434A00CA4DAE /* CreditCardDummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D6698D622737F6780018AF7E /* money.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = money.json; sourceTree = "<group>"; };
 		D6698D66273825210018AF7E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D6698D6827382C4A0018AF7E /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		D67F3F9C273A434A00CA4DAE /* CreditCardDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardDummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				D6698D502737EE250018AF7E /* Info.plist */,
 				D6698D5C2737EFEC0018AF7E /* CardListCell.swift */,
 				D6698D5D2737EFEC0018AF7E /* CardListCell.xib */,
+				D67F3F9C273A434A00CA4DAE /* CreditCardDummy.swift */,
 			);
 			path = CreditCardList;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				D6698D5E2737EFEC0018AF7E /* CardListCell.swift in Sources */,
 				D6698D572737EE4B0018AF7E /* CardListViewController.swift in Sources */,
 				D6698D432737EE240018AF7E /* AppDelegate.swift in Sources */,
+				D67F3F9D273A434A00CA4DAE /* CreditCardDummy.swift in Sources */,
 				D6698D452737EE240018AF7E /* SceneDelegate.swift in Sources */,
 				D6698D6927382C4A0018AF7E /* CardDetailViewController.swift in Sources */,
 			);
