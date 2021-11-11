@@ -74,10 +74,10 @@
 				D65062E8273BE7DE00CD135A /* Main.storyboard */,
 				D68C0E3F273BE95900D4564B /* AlertListCell.swift */,
 				D68C0E40273BE95900D4564B /* AlertListCell.xib */,
+				D6F39749273D287700CFB270 /* UNNotificationCenter.swift */,
 				D65062EB273BE7DF00CD135A /* Assets.xcassets */,
 				D65062ED273BE7DF00CD135A /* LaunchScreen.storyboard */,
 				D65062F0273BE7DF00CD135A /* Info.plist */,
-				D6F39749273D287700CFB270 /* UNNotificationCenter.swift */,
 			);
 			path = DrinkWater;
 			sourceTree = "<group>";
