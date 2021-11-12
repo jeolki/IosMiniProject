@@ -11,6 +11,12 @@
 		D697BE69273E43E200E5E71F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697BE68273E43E200E5E71F /* SceneDelegate.swift */; };
 		D697BE70273E43E200E5E71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D697BE6F273E43E200E5E71F /* Assets.xcassets */; };
 		D697BE73273E43E200E5E71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D697BE71273E43E200E5E71F /* LaunchScreen.storyboard */; };
+		D697BE7D273E44BF00E5E71F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D697BE7C273E44BF00E5E71F /* HomeViewController.swift */; };
+		D697BE80273E460F00E5E71F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D697BE7F273E460F00E5E71F /* SnapKit */; };
+		D6FF9A54273E4985004D8F68 /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6FF9A53273E4985004D8F68 /* Content.plist */; };
+		D6FF9A56273E4A1E004D8F68 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF9A55273E4A1E004D8F68 /* Content.swift */; };
+		D6FF9A58273E4DD2004D8F68 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF9A57273E4DD2004D8F68 /* ContentCollectionViewCell.swift */; };
+		D6FF9A5A273E4F84004D8F68 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF9A59273E4F84004D8F68 /* ContentCollectionViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,11 @@
 		D697BE6F273E43E200E5E71F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D697BE72273E43E200E5E71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D697BE74273E43E200E5E71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D697BE7C273E44BF00E5E71F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D6FF9A53273E4985004D8F68 /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Content.plist; sourceTree = "<group>"; };
+		D6FF9A55273E4A1E004D8F68 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		D6FF9A57273E4DD2004D8F68 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6FF9A59273E4F84004D8F68 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D697BE80273E460F00E5E71F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +69,11 @@
 				D697BE6F273E43E200E5E71F /* Assets.xcassets */,
 				D697BE71273E43E200E5E71F /* LaunchScreen.storyboard */,
 				D697BE74273E43E200E5E71F /* Info.plist */,
+				D6FF9A53273E4985004D8F68 /* Content.plist */,
+				D6FF9A55273E4A1E004D8F68 /* Content.swift */,
+				D697BE7C273E44BF00E5E71F /* HomeViewController.swift */,
+				D6FF9A57273E4DD2004D8F68 /* ContentCollectionViewCell.swift */,
+				D6FF9A59273E4F84004D8F68 /* ContentCollectionViewHeader.swift */,
 			);
 			path = NetflixStyleSampleApp;
 			sourceTree = "<group>";
@@ -77,6 +94,9 @@
 			dependencies = (
 			);
 			name = NetflixStyleSampleApp;
+			packageProductDependencies = (
+				D697BE7F273E460F00E5E71F /* SnapKit */,
+			);
 			productName = NetflixStyleSampleApp;
 			productReference = D697BE63273E43E100E5E71F /* NetflixStyleSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -105,6 +125,9 @@
 				Base,
 			);
 			mainGroup = D697BE5A273E43E100E5E71F;
+			packageReferences = (
+				D697BE7E273E460F00E5E71F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D697BE64273E43E100E5E71F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -121,6 +144,7 @@
 			files = (
 				D697BE73273E43E200E5E71F /* LaunchScreen.storyboard in Resources */,
 				D697BE70273E43E200E5E71F /* Assets.xcassets in Resources */,
+				D6FF9A54273E4985004D8F68 /* Content.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D697BE67273E43E200E5E71F /* AppDelegate.swift in Sources */,
+				D6FF9A5A273E4F84004D8F68 /* ContentCollectionViewHeader.swift in Sources */,
 				D697BE69273E43E200E5E71F /* SceneDelegate.swift in Sources */,
+				D697BE7D273E44BF00E5E71F /* HomeViewController.swift in Sources */,
+				D6FF9A56273E4A1E004D8F68 /* Content.swift in Sources */,
+				D6FF9A58273E4DD2004D8F68 /* ContentCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D697BE7E273E460F00E5E71F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D697BE7F273E460F00E5E71F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D697BE7E273E460F00E5E71F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D697BE5B273E43E100E5E71F /* Project object */;
 }
