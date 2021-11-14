@@ -23,7 +23,7 @@
 
 |                   목록화면                   |                    등록화면                    |
 | :------------------------------------------: | :--------------------------------------------: |
-| <img src="./images/ToDo_01.png" width="40%"> |  <img src="./images/Todo_02.png" width="40%">  |
+| <img src="./images/ToDo_01.png" width="40%"> |  <img src="./images/ToDo_02.png" width="40%">  |
 |                 **편집화면**                 |                  **선택화면**                  |
 | <img src="./images/ToDo_03.png" width="40%"> | <img src="./images/ToDo_04.png" width="40%" /> |
 
