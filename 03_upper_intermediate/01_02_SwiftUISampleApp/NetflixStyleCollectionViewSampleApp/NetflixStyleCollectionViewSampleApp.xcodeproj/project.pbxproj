@@ -19,6 +19,8 @@
 		D653D0E7273F9D3500229D57 /* Content.plist in Resources */ = {isa = PBXBuildFile; fileRef = D653D0E6273F9D3500229D57 /* Content.plist */; };
 		D653D0EA273F9D5700229D57 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653D0E8273F9D5700229D57 /* ContentCollectionViewCell.swift */; };
 		D653D0EB273F9D5700229D57 /* ContentCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D653D0E9273F9D5700229D57 /* ContentCollectionViewHeader.swift */; };
+		D6CC860F2742C15900A0DD8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC860E2742C15900A0DD8D /* ContentView.swift */; };
+		D6CC86112742C2D200A0DD8D /* ContentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CC86102742C2D200A0DD8D /* ContentDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		D653D0E6273F9D3500229D57 /* Content.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Content.plist; sourceTree = "<group>"; };
 		D653D0E8273F9D5700229D57 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		D653D0E9273F9D5700229D57 /* ContentCollectionViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewHeader.swift; sourceTree = "<group>"; };
+		D6CC860E2742C15900A0DD8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6CC86102742C2D200A0DD8D /* ContentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				D653D0C6273E9A6C00229D57 /* Info.plist */,
 				D653D0E4273F9CFC00229D57 /* Content.swift */,
 				D653D0E6273F9D3500229D57 /* Content.plist */,
+				D6CC860E2742C15900A0DD8D /* ContentView.swift */,
+				D6CC86102742C2D200A0DD8D /* ContentDetailView.swift */,
 			);
 			path = NetflixStyleCollectionViewSampleApp;
 			sourceTree = "<group>";
@@ -166,6 +172,8 @@
 				D653D0EA273F9D5700229D57 /* ContentCollectionViewCell.swift in Sources */,
 				D653D0BB273E9A6B00229D57 /* SceneDelegate.swift in Sources */,
 				D653D0E3273F986900229D57 /* ContentCollectionViewRankCell.swift in Sources */,
+				D6CC86112742C2D200A0DD8D /* ContentDetailView.swift in Sources */,
+				D6CC860F2742C15900A0DD8D /* ContentView.swift in Sources */,
 				D653D0EB273F9D5700229D57 /* ContentCollectionViewHeader.swift in Sources */,
 				D653D0E5273F9CFC00229D57 /* Content.swift in Sources */,
 				D653D0CD273E9B3900229D57 /* HomeViewController.swift in Sources */,

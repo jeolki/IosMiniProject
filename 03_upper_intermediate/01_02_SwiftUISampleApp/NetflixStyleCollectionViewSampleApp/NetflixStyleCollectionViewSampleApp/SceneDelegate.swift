@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,19 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        // HomeViewController가 기본이 되도록 설정
-        guard let windowScene = scene as? UIWindowScene else { return }
-        self.window = UIWindow(windowScene: windowScene)
+        // ContentView 로 root 변경
+        let contentView = ContentView()
         
-        let layout = UICollectionViewFlowLayout()
-        let homeViewController = HomeViewController(collectionViewLayout: layout)
-        let rootNavigationController = UINavigationController(rootViewController: homeViewController)
-        
-        self.window?.rootViewController = rootNavigationController
-        self.window?.makeKeyAndVisible()
-        
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if let windowScene = scene as? UIWindowScene {
+            let window = UIWindow(windowScene: windowScene)
+            window.rootViewController = UIHostingController(rootView: contentView)
+            self.window = window
+            window.makeKeyAndVisible()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
