@@ -13,6 +13,8 @@ class BeerListViewController: UITableViewController {
     
     var currentPage = 1
     
+    var dataTasks = [URLSessionTask]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,13 +26,16 @@ class BeerListViewController: UITableViewController {
         tableView.register(BeerListCell.self, forCellReuseIdentifier: "BeerListCell")
         tableView.rowHeight = 150
         
+        // 스크롤
+        tableView.prefetchDataSource = self
+        
         // 페이지에서 시작
         fetchBeer(of: currentPage)
     }
 }
 
 // UITableView DataSource, Delegate
-extension BeerListViewController {
+extension BeerListViewController: UITableViewDataSourcePrefetching {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return beerList.count
@@ -53,12 +58,25 @@ extension BeerListViewController {
         self.show(detailViewController, sender: nil)
     }
     
+    // 페이징
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        guard currentPage != 1 else { return }
+        
+        indexPaths.forEach {
+            if ($0.row + 1)/25 + 1 == currentPage {
+                self.fetchBeer(of: currentPage)
+            }
+        }
+    }
+    
 }
 
 // Data Fetching
 private extension BeerListViewController {
     func fetchBeer(of page: Int) {
-        guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)") else { return }
+        guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)"),
+                dataTasks.firstIndex(where: { $0.originalRequest?.url == url }) == nil else { return }
+        // 불러 왔던것은 request 진행하지 않도록
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -103,5 +121,8 @@ private extension BeerListViewController {
         
         // 반드시 실행
         dataTask.resume()
+        
+        // 차곡차곡 저장
+        dataTasks.append(dataTask)
     }
 }
