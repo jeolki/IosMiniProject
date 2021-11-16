@@ -13,6 +13,11 @@
 		D60980BB2743D399002F45D5 /* AssetMenuButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980BA2743D399002F45D5 /* AssetMenuButtonStyle.swift */; };
 		D60980BD2743D55E002F45D5 /* AssetMenuGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980BC2743D55E002F45D5 /* AssetMenuGridView.swift */; };
 		D60980BF2743D663002F45D5 /* AssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980BE2743D663002F45D5 /* AssetView.swift */; };
+		D60980C12743D7A2002F45D5 /* AssetBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C02743D7A2002F45D5 /* AssetBanner.swift */; };
+		D60980C42743D7F8002F45D5 /* BannerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C32743D7F8002F45D5 /* BannerCard.swift */; };
+		D60980C72743D95E002F45D5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C62743D95E002F45D5 /* PageViewController.swift */; };
+		D60980C92743E4F2002F45D5 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C82743E4F2002F45D5 /* PageControl.swift */; };
+		D60980CB2743E640002F45D5 /* AssetBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980CA2743E640002F45D5 /* AssetBannerView.swift */; };
 		D6BCE9522743C8950048C6FF /* MyAssetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */; };
 		D6BCE9542743C8950048C6FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9532743C8950048C6FF /* ContentView.swift */; };
 		D6BCE9562743C8960048C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BCE9552743C8960048C6FF /* Assets.xcassets */; };
@@ -26,6 +31,11 @@
 		D60980BA2743D399002F45D5 /* AssetMenuButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuButtonStyle.swift; sourceTree = "<group>"; };
 		D60980BC2743D55E002F45D5 /* AssetMenuGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetMenuGridView.swift; sourceTree = "<group>"; };
 		D60980BE2743D663002F45D5 /* AssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetView.swift; sourceTree = "<group>"; };
+		D60980C02743D7A2002F45D5 /* AssetBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBanner.swift; sourceTree = "<group>"; };
+		D60980C32743D7F8002F45D5 /* BannerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCard.swift; sourceTree = "<group>"; };
+		D60980C62743D95E002F45D5 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		D60980C82743E4F2002F45D5 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
+		D60980CA2743E640002F45D5 /* AssetBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBannerView.swift; sourceTree = "<group>"; };
 		D6BCE94E2743C8950048C6FF /* MyAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetsApp.swift; sourceTree = "<group>"; };
 		D6BCE9532743C8950048C6FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +54,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D60980C22743D7AD002F45D5 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D60980B62743D1D5002F45D5 /* AssetMenu.swift */,
+				D60980C02743D7A2002F45D5 /* AssetBanner.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		D60980C52743D80A002F45D5 /* AssetMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D60980BA2743D399002F45D5 /* AssetMenuButtonStyle.swift */,
+				D60980BC2743D55E002F45D5 /* AssetMenuGridView.swift */,
+			);
+			path = AssetMenu;
+			sourceTree = "<group>";
+		};
+		D60980CC2743E652002F45D5 /* AssetBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				D60980C32743D7F8002F45D5 /* BannerCard.swift */,
+				D60980C62743D95E002F45D5 /* PageViewController.swift */,
+				D60980C82743E4F2002F45D5 /* PageControl.swift */,
+				D60980CA2743E640002F45D5 /* AssetBannerView.swift */,
+			);
+			path = AssetBannerView;
+			sourceTree = "<group>";
+		};
 		D6BCE9452743C8950048C6FF = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +105,10 @@
 				D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */,
 				D6BCE9532743C8950048C6FF /* ContentView.swift */,
 				D60980B42743CCCC002F45D5 /* NavigationBarWithButton.swift */,
-				D60980B62743D1D5002F45D5 /* AssetMenu.swift */,
-				D60980BA2743D399002F45D5 /* AssetMenuButtonStyle.swift */,
-				D60980BC2743D55E002F45D5 /* AssetMenuGridView.swift */,
 				D60980BE2743D663002F45D5 /* AssetView.swift */,
+				D60980C22743D7AD002F45D5 /* Entities */,
+				D60980C52743D80A002F45D5 /* AssetMenu */,
+				D60980CC2743E652002F45D5 /* AssetBannerView */,
 				D60980B82743D2F9002F45D5 /* Launch Screen.storyboard */,
 				D6BCE9552743C8960048C6FF /* Assets.xcassets */,
 				D6BCE9572743C8960048C6FF /* Preview Content */,
@@ -157,11 +196,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60980BD2743D55E002F45D5 /* AssetMenuGridView.swift in Sources */,
+				D60980C72743D95E002F45D5 /* PageViewController.swift in Sources */,
 				D60980B52743CCCC002F45D5 /* NavigationBarWithButton.swift in Sources */,
+				D60980C12743D7A2002F45D5 /* AssetBanner.swift in Sources */,
 				D60980BF2743D663002F45D5 /* AssetView.swift in Sources */,
 				D6BCE9542743C8950048C6FF /* ContentView.swift in Sources */,
 				D6BCE9522743C8950048C6FF /* MyAssetsApp.swift in Sources */,
 				D60980B72743D1D5002F45D5 /* AssetMenu.swift in Sources */,
+				D60980C92743E4F2002F45D5 /* PageControl.swift in Sources */,
+				D60980CB2743E640002F45D5 /* AssetBannerView.swift in Sources */,
+				D60980C42743D7F8002F45D5 /* BannerCard.swift in Sources */,
 				D60980BB2743D399002F45D5 /* AssetMenuButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
