@@ -24,6 +24,8 @@
 		D60980D42743EE63002F45D5 /* AssetSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */; };
 		D60980D62743EEE5002F45D5 /* AssetSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D52743EEE5002F45D5 /* AssetSectionView.swift */; };
 		D60980D82743F075002F45D5 /* AssetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D72743F075002F45D5 /* AssetSummaryView.swift */; };
+		D60980DB2743F9BF002F45D5 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980DA2743F9BF002F45D5 /* TabMenuView.swift */; };
+		D60980DD2743FC6E002F45D5 /* AssetCardSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980DC2743FC6E002F45D5 /* AssetCardSectionView.swift */; };
 		D6BCE9522743C8950048C6FF /* MyAssetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */; };
 		D6BCE9542743C8950048C6FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9532743C8950048C6FF /* ContentView.swift */; };
 		D6BCE9562743C8960048C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BCE9552743C8960048C6FF /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionHeaderView.swift; sourceTree = "<group>"; };
 		D60980D52743EEE5002F45D5 /* AssetSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionView.swift; sourceTree = "<group>"; };
 		D60980D72743F075002F45D5 /* AssetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSummaryView.swift; sourceTree = "<group>"; };
+		D60980DA2743F9BF002F45D5 /* TabMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
+		D60980DC2743FC6E002F45D5 /* AssetCardSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCardSectionView.swift; sourceTree = "<group>"; };
 		D6BCE94E2743C8950048C6FF /* MyAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetsApp.swift; sourceTree = "<group>"; };
 		D6BCE9532743C8950048C6FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */,
 				D60980D52743EEE5002F45D5 /* AssetSectionView.swift */,
 				D60980D72743F075002F45D5 /* AssetSummaryView.swift */,
+				D60980DA2743F9BF002F45D5 /* TabMenuView.swift */,
+				D60980DC2743FC6E002F45D5 /* AssetCardSectionView.swift */,
 			);
 			path = AssetSummaryView;
 			sourceTree = "<group>";
@@ -233,10 +239,12 @@
 				D60980C12743D7A2002F45D5 /* AssetBanner.swift in Sources */,
 				D60980BF2743D663002F45D5 /* AssetView.swift in Sources */,
 				D6BCE9542743C8950048C6FF /* ContentView.swift in Sources */,
+				D60980DB2743F9BF002F45D5 /* TabMenuView.swift in Sources */,
 				D6BCE9522743C8950048C6FF /* MyAssetsApp.swift in Sources */,
 				D60980B72743D1D5002F45D5 /* AssetMenu.swift in Sources */,
 				D60980C92743E4F2002F45D5 /* PageControl.swift in Sources */,
 				D60980CB2743E640002F45D5 /* AssetBannerView.swift in Sources */,
+				D60980DD2743FC6E002F45D5 /* AssetCardSectionView.swift in Sources */,
 				D60980C42743D7F8002F45D5 /* BannerCard.swift in Sources */,
 				D60980BB2743D399002F45D5 /* AssetMenuButtonStyle.swift in Sources */,
 			);
