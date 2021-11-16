@@ -18,6 +18,12 @@
 		D60980C72743D95E002F45D5 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C62743D95E002F45D5 /* PageViewController.swift */; };
 		D60980C92743E4F2002F45D5 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980C82743E4F2002F45D5 /* PageControl.swift */; };
 		D60980CB2743E640002F45D5 /* AssetBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980CA2743E640002F45D5 /* AssetBannerView.swift */; };
+		D60980CE2743EB83002F45D5 /* assets.json in Resources */ = {isa = PBXBuildFile; fileRef = D60980CD2743EB83002F45D5 /* assets.json */; };
+		D60980D02743EBB5002F45D5 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980CF2743EBB5002F45D5 /* Asset.swift */; };
+		D60980D22743ECE3002F45D5 /* AssetSummaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D12743ECE3002F45D5 /* AssetSummaryData.swift */; };
+		D60980D42743EE63002F45D5 /* AssetSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */; };
+		D60980D62743EEE5002F45D5 /* AssetSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D52743EEE5002F45D5 /* AssetSectionView.swift */; };
+		D60980D82743F075002F45D5 /* AssetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60980D72743F075002F45D5 /* AssetSummaryView.swift */; };
 		D6BCE9522743C8950048C6FF /* MyAssetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */; };
 		D6BCE9542743C8950048C6FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BCE9532743C8950048C6FF /* ContentView.swift */; };
 		D6BCE9562743C8960048C6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BCE9552743C8960048C6FF /* Assets.xcassets */; };
@@ -36,6 +42,12 @@
 		D60980C62743D95E002F45D5 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		D60980C82743E4F2002F45D5 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		D60980CA2743E640002F45D5 /* AssetBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetBannerView.swift; sourceTree = "<group>"; };
+		D60980CD2743EB83002F45D5 /* assets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = assets.json; sourceTree = "<group>"; };
+		D60980CF2743EBB5002F45D5 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		D60980D12743ECE3002F45D5 /* AssetSummaryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSummaryData.swift; sourceTree = "<group>"; };
+		D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionHeaderView.swift; sourceTree = "<group>"; };
+		D60980D52743EEE5002F45D5 /* AssetSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSectionView.swift; sourceTree = "<group>"; };
+		D60980D72743F075002F45D5 /* AssetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetSummaryView.swift; sourceTree = "<group>"; };
 		D6BCE94E2743C8950048C6FF /* MyAssets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAssets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BCE9512743C8950048C6FF /* MyAssetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAssetsApp.swift; sourceTree = "<group>"; };
 		D6BCE9532743C8950048C6FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +71,7 @@
 			children = (
 				D60980B62743D1D5002F45D5 /* AssetMenu.swift */,
 				D60980C02743D7A2002F45D5 /* AssetBanner.swift */,
+				D60980CF2743EBB5002F45D5 /* Asset.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -81,6 +94,17 @@
 				D60980CA2743E640002F45D5 /* AssetBannerView.swift */,
 			);
 			path = AssetBannerView;
+			sourceTree = "<group>";
+		};
+		D60980D92743F14D002F45D5 /* AssetSummaryView */ = {
+			isa = PBXGroup;
+			children = (
+				D60980D12743ECE3002F45D5 /* AssetSummaryData.swift */,
+				D60980D32743EE63002F45D5 /* AssetSectionHeaderView.swift */,
+				D60980D52743EEE5002F45D5 /* AssetSectionView.swift */,
+				D60980D72743F075002F45D5 /* AssetSummaryView.swift */,
+			);
+			path = AssetSummaryView;
 			sourceTree = "<group>";
 		};
 		D6BCE9452743C8950048C6FF = {
@@ -109,8 +133,10 @@
 				D60980C22743D7AD002F45D5 /* Entities */,
 				D60980C52743D80A002F45D5 /* AssetMenu */,
 				D60980CC2743E652002F45D5 /* AssetBannerView */,
+				D60980D92743F14D002F45D5 /* AssetSummaryView */,
 				D60980B82743D2F9002F45D5 /* Launch Screen.storyboard */,
 				D6BCE9552743C8960048C6FF /* Assets.xcassets */,
+				D60980CD2743EB83002F45D5 /* assets.json */,
 				D6BCE9572743C8960048C6FF /* Preview Content */,
 			);
 			path = MyAssets;
@@ -184,6 +210,7 @@
 			files = (
 				D60980B92743D2F9002F45D5 /* Launch Screen.storyboard in Resources */,
 				D6BCE9592743C8960048C6FF /* Preview Assets.xcassets in Resources */,
+				D60980CE2743EB83002F45D5 /* assets.json in Resources */,
 				D6BCE9562743C8960048C6FF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +223,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60980BD2743D55E002F45D5 /* AssetMenuGridView.swift in Sources */,
+				D60980D62743EEE5002F45D5 /* AssetSectionView.swift in Sources */,
+				D60980D02743EBB5002F45D5 /* Asset.swift in Sources */,
 				D60980C72743D95E002F45D5 /* PageViewController.swift in Sources */,
+				D60980D22743ECE3002F45D5 /* AssetSummaryData.swift in Sources */,
+				D60980D42743EE63002F45D5 /* AssetSectionHeaderView.swift in Sources */,
+				D60980D82743F075002F45D5 /* AssetSummaryView.swift in Sources */,
 				D60980B52743CCCC002F45D5 /* NavigationBarWithButton.swift in Sources */,
 				D60980C12743D7A2002F45D5 /* AssetBanner.swift in Sources */,
 				D60980BF2743D663002F45D5 /* AssetView.swift in Sources */,
