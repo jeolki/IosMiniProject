@@ -16,6 +16,7 @@
 		D64DEC932744C7FD00CE33FE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D64DEC922744C7FD00CE33FE /* Kingfisher */; };
 		D64DEC972744CD9800CE33FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC962744CD9800CE33FE /* TodayViewController.swift */; };
 		D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */; };
+		D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D64DEC882744C7B600CE33FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64DEC962744CD9800CE33FE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
+		D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				D64DEC962744CD9800CE33FE /* TodayViewController.swift */,
 				D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */,
+				D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				D64DEC972744CD9800CE33FE /* TodayViewController.swift in Sources */,
 				D64DEC7F2744C7B600CE33FE /* TabBarController.swift in Sources */,
 				D64DEC7B2744C7B600CE33FE /* AppDelegate.swift in Sources */,
+				D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */,
 				D64DEC7D2744C7B600CE33FE /* SceneDelegate.swift in Sources */,
 				D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */,
 			);
