@@ -17,6 +17,7 @@
 		D64DEC972744CD9800CE33FE /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC962744CD9800CE33FE /* TodayViewController.swift */; };
 		D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */; };
 		D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */; };
+		D64DEC9D2744DD9900CE33FE /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC9C2744DD9900CE33FE /* AppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D64DEC962744CD9800CE33FE /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
+		D64DEC9C2744DD9900CE33FE /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		D64DEC942744CD6B00CE33FE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D64DEC9E2744DD9E00CE33FE /* App */,
 				D64DEC952744CD8900CE33FE /* Today */,
 				D64DEC7E2744C7B600CE33FE /* TabBarController.swift */,
 			);
@@ -91,6 +94,14 @@
 				D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		D64DEC9E2744DD9E00CE33FE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D64DEC9C2744DD9900CE33FE /* AppViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				D64DEC7F2744C7B600CE33FE /* TabBarController.swift in Sources */,
 				D64DEC7B2744C7B600CE33FE /* AppDelegate.swift in Sources */,
 				D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */,
+				D64DEC9D2744DD9900CE33FE /* AppViewController.swift in Sources */,
 				D64DEC7D2744C7B600CE33FE /* SceneDelegate.swift in Sources */,
 				D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */,
 			);
