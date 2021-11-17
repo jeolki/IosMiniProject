@@ -18,6 +18,9 @@
 		D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */; };
 		D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */; };
 		D64DEC9D2744DD9900CE33FE /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DEC9C2744DD9900CE33FE /* AppViewController.swift */; };
+		D64DECA22744E55C00CE33FE /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA12744E55C00CE33FE /* FeatureSectionView.swift */; };
+		D64DECA42744E90900CE33FE /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA32744E90900CE33FE /* FeatureSectionCollectionViewCell.swift */; };
+		D64DECA62744EDF800CE33FE /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA52744EDF800CE33FE /* SeparatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		D64DEC982744D15C00CE33FE /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		D64DEC9A2744D68900CE33FE /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
 		D64DEC9C2744DD9900CE33FE /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		D64DECA12744E55C00CE33FE /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
+		D64DECA32744E90900CE33FE /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		D64DECA52744EDF800CE33FE /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				D64DEC9C2744DD9900CE33FE /* AppViewController.swift */,
+				D64DECA12744E55C00CE33FE /* FeatureSectionView.swift */,
+				D64DECA32744E90900CE33FE /* FeatureSectionCollectionViewCell.swift */,
+				D64DECA52744EDF800CE33FE /* SeparatorView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -184,11 +193,14 @@
 			files = (
 				D64DEC972744CD9800CE33FE /* TodayViewController.swift in Sources */,
 				D64DEC7F2744C7B600CE33FE /* TabBarController.swift in Sources */,
+				D64DECA62744EDF800CE33FE /* SeparatorView.swift in Sources */,
 				D64DEC7B2744C7B600CE33FE /* AppDelegate.swift in Sources */,
 				D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */,
 				D64DEC9D2744DD9900CE33FE /* AppViewController.swift in Sources */,
+				D64DECA42744E90900CE33FE /* FeatureSectionCollectionViewCell.swift in Sources */,
 				D64DEC7D2744C7B600CE33FE /* SceneDelegate.swift in Sources */,
 				D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */,
+				D64DECA22744E55C00CE33FE /* FeatureSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
