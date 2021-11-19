@@ -23,6 +23,7 @@
 		D64DECA62744EDF800CE33FE /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA52744EDF800CE33FE /* SeparatorView.swift */; };
 		D64DECA82744F2CD00CE33FE /* RankingFeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA72744F2CD00CE33FE /* RankingFeatureSectionView.swift */; };
 		D6B081472747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B081462747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift */; };
+		D6B081492747D323008F7171 /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B081482747D323008F7171 /* ExchangeCodeButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D64DECA52744EDF800CE33FE /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		D64DECA72744F2CD00CE33FE /* RankingFeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureSectionView.swift; sourceTree = "<group>"; };
 		D6B081462747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
+		D6B081482747D323008F7171 /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D64DECA52744EDF800CE33FE /* SeparatorView.swift */,
 				D64DECA72744F2CD00CE33FE /* RankingFeatureSectionView.swift */,
 				D6B081462747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift */,
+				D6B081482747D323008F7171 /* ExchangeCodeButtonView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				D64DEC972744CD9800CE33FE /* TodayViewController.swift in Sources */,
 				D64DEC7F2744C7B600CE33FE /* TabBarController.swift in Sources */,
+				D6B081492747D323008F7171 /* ExchangeCodeButtonView.swift in Sources */,
 				D64DECA62744EDF800CE33FE /* SeparatorView.swift in Sources */,
 				D64DEC7B2744C7B600CE33FE /* AppDelegate.swift in Sources */,
 				D64DEC9B2744D68900CE33FE /* TodayCollectionHeaderView.swift in Sources */,

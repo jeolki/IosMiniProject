@@ -19,17 +19,22 @@ final class AppViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
-        // 필요한것 임의로 지정
+        // 필요한것 임의로 지정 -> 구현되면 바꿔주기
         let featureSectionView = FeatureSectionView(frame: .zero)
         let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
-        let exchangeCodeButtonView = UIView()
+        let exchangeCodeButtonView = ExchangeCodeButtonView(frame: .zero)
         
-        exchangeCodeButtonView.backgroundColor = .yellow
+        // 하단에 여유를 주기위해서 spacing을 추가한다.
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(100.0)
+        }
         
         [
             featureSectionView,
             rankingFeatureSectionView,
-            exchangeCodeButtonView
+            exchangeCodeButtonView,
+            spacingView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
