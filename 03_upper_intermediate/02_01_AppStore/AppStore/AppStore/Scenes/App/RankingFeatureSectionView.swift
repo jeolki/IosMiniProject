@@ -10,8 +10,7 @@ import UIKit
 
 final class RankingFeatureSectionView: UIView {
     
-    private let cellHeight: CGFloat = 30.0
-    
+    // 1
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18.0, weight: .black)
@@ -47,15 +46,17 @@ final class RankingFeatureSectionView: UIView {
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
         
+        // cell - 4
         collectionView.register(
-            UICollectionViewCell.self,
-            forCellWithReuseIdentifier: "RankingFeatureCollectionView"
+            RankingFeatureCollectionViewCell.self,
+            forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell"
         )
         
         return collectionView
         
     }()
     
+    // 4
     private let separatorView = SeparatorView(frame: .zero)
     
     override init(frame: CGRect) {
@@ -70,11 +71,12 @@ final class RankingFeatureSectionView: UIView {
     
 }
 
+// 2
 extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(
             width: collectionView.frame.width - 32,
-            height: cellHeight
+            height: RankingFeatureCollectionViewCell.height
         )
     }
 }
@@ -84,18 +86,20 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
         9
     }
     
+    // cell - 4
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "RankingFeatureCollectionView",
+            withReuseIdentifier: "RankingFeatureCollectionViewCell",
             for: indexPath
-        )
+        ) as? RankingFeatureCollectionViewCell
         
-        cell.backgroundColor = .red
+        cell?.setup()
         
-        return cell
+        return cell ?? UICollectionViewCell()
     }
 }
 
+// 3
 private extension RankingFeatureSectionView {
     func setupViews() {
         [titleLabel, showAllAppsButton, collectionView, separatorView]
@@ -114,7 +118,7 @@ private extension RankingFeatureSectionView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
-            $0.height.equalTo(cellHeight * 3)
+            $0.height.equalTo(RankingFeatureCollectionViewCell.height * 3)
             $0.trailing.equalToSuperview()
             $0.leading.equalToSuperview()
         }
