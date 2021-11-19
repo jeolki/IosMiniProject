@@ -93,9 +93,9 @@ private extension FeatureSectionView {
         }
         
         separatorView.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
-            $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
             $0.bottom.equalToSuperview()
         }
     

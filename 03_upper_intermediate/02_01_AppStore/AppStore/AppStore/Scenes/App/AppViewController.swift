@@ -21,11 +21,9 @@ final class AppViewController: UIViewController {
         
         // 필요한것 임의로 지정
         let featureSectionView = FeatureSectionView(frame: .zero)
-        let rankingFeatureSectionView = UIView()
+        let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
         let exchangeCodeButtonView = UIView()
         
-        
-        rankingFeatureSectionView.backgroundColor = .blue
         exchangeCodeButtonView.backgroundColor = .yellow
         
         [
