@@ -6,6 +6,7 @@
 //
 
 import SnapKit
+import Kingfisher
 import UIKit
 
 final class TodayCollectionViewCell: UICollectionViewCell {
@@ -36,25 +37,31 @@ final class TodayCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true // 이미지뷰의 크기보다 이미지가 커서 벗어나는것 방지
         imageView.layer.cornerRadius = 12.0
-        imageView.backgroundColor = .gray
+      
         
         return imageView
     }()
     
     
-    func setup() {
+    func setup(today: Today) {
         setupSubView()
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10
         
-        subTitleLabel.text = "서브타이틀"
-        descriptionLabel.text = "설명설명"
-        titleLabel.text = "앱의 이름"
+        subTitleLabel.text = today.subTitle
+        descriptionLabel.text = today.description
+        titleLabel.text = today.title
+        
+        // 기본이 옵셔널이기 때문에 체크필요
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
+        
     }
 }
 

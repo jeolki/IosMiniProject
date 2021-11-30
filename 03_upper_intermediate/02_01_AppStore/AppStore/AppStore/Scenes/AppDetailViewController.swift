@@ -10,6 +10,8 @@ import UIKit
 
 final class AppDetailViewController: UIViewController {
     
+    private let today: Today
+    
     // 1
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -66,10 +68,19 @@ final class AppDetailViewController: UIViewController {
         
         // 확인하기 위해 임의로설정
         appIconImageView.backgroundColor = .lightGray
-        titleLabel.text = "title"
-        subTitleLabel.text = "subtitle"
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
     }
     
+    init(today: Today) {
+        self.today = today
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 // MARK: private
