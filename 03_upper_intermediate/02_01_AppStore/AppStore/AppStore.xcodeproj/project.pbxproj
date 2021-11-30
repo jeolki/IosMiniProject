@@ -22,6 +22,7 @@
 		D64DECA42744E90900CE33FE /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA32744E90900CE33FE /* FeatureSectionCollectionViewCell.swift */; };
 		D64DECA62744EDF800CE33FE /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA52744EDF800CE33FE /* SeparatorView.swift */; };
 		D64DECA82744F2CD00CE33FE /* RankingFeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64DECA72744F2CD00CE33FE /* RankingFeatureSectionView.swift */; };
+		D6663A222755F0C8007688B5 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6663A212755F0C8007688B5 /* AppDetailViewController.swift */; };
 		D6B081472747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B081462747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift */; };
 		D6B081492747D323008F7171 /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B081482747D323008F7171 /* ExchangeCodeButtonView.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		D64DECA32744E90900CE33FE /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		D64DECA52744EDF800CE33FE /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		D64DECA72744F2CD00CE33FE /* RankingFeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureSectionView.swift; sourceTree = "<group>"; };
+		D6663A212755F0C8007688B5 /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
 		D6B081462747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6B081482747D323008F7171 /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				D64DEC9E2744DD9E00CE33FE /* App */,
 				D64DEC952744CD8900CE33FE /* Today */,
 				D64DEC7E2744C7B600CE33FE /* TabBarController.swift */,
+				D6663A212755F0C8007688B5 /* AppDetailViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				D64DEC7D2744C7B600CE33FE /* SceneDelegate.swift in Sources */,
 				D64DEC992744D15C00CE33FE /* TodayCollectionViewCell.swift in Sources */,
 				D64DECA22744E55C00CE33FE /* FeatureSectionView.swift in Sources */,
+				D6663A222755F0C8007688B5 /* AppDetailViewController.swift in Sources */,
 				D6B081472747C9BB008F7171 /* RankingFeatureCollectionViewCell.swift in Sources */,
 				D64DECA82744F2CD00CE33FE /* RankingFeatureSectionView.swift in Sources */,
 			);
