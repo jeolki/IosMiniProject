@@ -62,12 +62,12 @@ final class RankingFeatureCollectionViewCell: UICollectionViewCell {
     }()
     
     // 3. 레이아웃 설정 메서드 호출 setup 메서드
-    func setup() {
+    func setup(rankingFeature: RankingFeature) {
         setupLayout()
         
-        titleLabel.text = "앱 이름"
-        descriptionLabel.text = "이런이렁 앱입니다."
-        inAppPurchaseInfoLabel.isHidden = [true, false].randomElement() ?? true
+        titleLabel.text = rankingFeature.title
+        descriptionLabel.text = rankingFeature.description
+        inAppPurchaseInfoLabel.isHidden = !rankingFeature.isInPurchaseApp
     }
     
 }
