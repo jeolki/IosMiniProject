@@ -16,6 +16,8 @@
 		D6BBA972275E2BF00046F62F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6BBA971275E2BF00046F62F /* SnapKit */; };
 		D6BBA975275E2C270046F62F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6BBA974275E2C270046F62F /* Alamofire */; };
 		D6BBA978275E417F0046F62F /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BBA977275E417F0046F62F /* StationDetailViewController.swift */; };
+		D6F2B1622768B6FD00DCE2F5 /* StationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2B1612768B6FD00DCE2F5 /* StationResponseModel.swift */; };
+		D6F2B1642768BB2C00DCE2F5 /* StationArrivalDataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F2B1632768BB2C00DCE2F5 /* StationArrivalDataResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D6BBA968275E2BA60046F62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6BBA96A275E2BA60046F62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6BBA977275E417F0046F62F /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
+		D6F2B1612768B6FD00DCE2F5 /* StationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationResponseModel.swift; sourceTree = "<group>"; };
+		D6F2B1632768BB2C00DCE2F5 /* StationArrivalDataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationArrivalDataResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			children = (
 				D6BBA95C275E2BA60046F62F /* AppDelegate.swift */,
 				D6BBA95E275E2BA60046F62F /* SceneDelegate.swift */,
+				D6F2B1612768B6FD00DCE2F5 /* StationResponseModel.swift */,
+				D6F2B1632768BB2C00DCE2F5 /* StationArrivalDataResponseModel.swift */,
 				D6BBA976275E41710046F62F /* Scenes */,
 				D6BBA965275E2BA60046F62F /* Assets.xcassets */,
 				D6BBA967275E2BA60046F62F /* LaunchScreen.storyboard */,
@@ -161,7 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6BBA978275E417F0046F62F /* StationDetailViewController.swift in Sources */,
+				D6F2B1622768B6FD00DCE2F5 /* StationResponseModel.swift in Sources */,
 				D6BBA961275E2BA60046F62F /* StationSearchViewController.swift in Sources */,
+				D6F2B1642768BB2C00DCE2F5 /* StationArrivalDataResponseModel.swift in Sources */,
 				D6BBA95D275E2BA60046F62F /* AppDelegate.swift in Sources */,
 				D642FE5B27621D6800F1CC76 /* StationDetailCollectionViewCell.swift in Sources */,
 				D6BBA95F275E2BA60046F62F /* SceneDelegate.swift in Sources */,
