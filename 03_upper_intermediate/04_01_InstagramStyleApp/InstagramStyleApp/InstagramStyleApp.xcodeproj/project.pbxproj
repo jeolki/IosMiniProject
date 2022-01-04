@@ -16,6 +16,7 @@
 		D6A444002784231700AC05BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443FF2784231700AC05BB /* TabBarController.swift */; };
 		D6A44403278428A500AC05BB /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A44402278428A500AC05BB /* FeedTableViewCell.swift */; };
 		D6A444052784306B00AC05BB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A444042784306B00AC05BB /* UIButton+.swift */; };
+		D6A44408278465D700AC05BB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A44407278465D700AC05BB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		D6A443FF2784231700AC05BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D6A44402278428A500AC05BB /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		D6A444042784306B00AC05BB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		D6A44407278465D700AC05BB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +78,28 @@
 		D6A444012784231B00AC05BB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D6A443D027841F7600AC05BB /* FeedViewController.swift */,
-				D6A44402278428A500AC05BB /* FeedTableViewCell.swift */,
+				D6A44406278465C200AC05BB /* Feed */,
+				D6A44409278465DA00AC05BB /* Profile */,
 				D6A443FF2784231700AC05BB /* TabBarController.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D6A44406278465C200AC05BB /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D6A443D027841F7600AC05BB /* FeedViewController.swift */,
+				D6A44402278428A500AC05BB /* FeedTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D6A44409278465DA00AC05BB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D6A44407278465D700AC05BB /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +182,7 @@
 				D6A444052784306B00AC05BB /* UIButton+.swift in Sources */,
 				D6A444002784231700AC05BB /* TabBarController.swift in Sources */,
 				D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */,
+				D6A44408278465D700AC05BB /* ProfileViewController.swift in Sources */,
 				D6A443CF27841F7600AC05BB /* SceneDelegate.swift in Sources */,
 				D6A44403278428A500AC05BB /* FeedTableViewCell.swift in Sources */,
 			);
