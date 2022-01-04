@@ -15,6 +15,7 @@
 		D6A443FE2784216E00AC05BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6A443FD2784216E00AC05BB /* SnapKit */; };
 		D6A444002784231700AC05BB /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443FF2784231700AC05BB /* TabBarController.swift */; };
 		D6A44403278428A500AC05BB /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A44402278428A500AC05BB /* FeedTableViewCell.swift */; };
+		D6A444052784306B00AC05BB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A444042784306B00AC05BB /* UIButton+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		D6A443DA27841F7700AC05BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6A443FF2784231700AC05BB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D6A44402278428A500AC05BB /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		D6A444042784306B00AC05BB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				D6A443CC27841F7600AC05BB /* AppDelegate.swift */,
 				D6A443CE27841F7600AC05BB /* SceneDelegate.swift */,
+				D6A444042784306B00AC05BB /* UIButton+.swift */,
 				D6A444012784231B00AC05BB /* Scenes */,
 				D6A443D527841F7700AC05BB /* Assets.xcassets */,
 				D6A443D727841F7700AC05BB /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A443D127841F7600AC05BB /* FeedViewController.swift in Sources */,
+				D6A444052784306B00AC05BB /* UIButton+.swift in Sources */,
 				D6A444002784231700AC05BB /* TabBarController.swift in Sources */,
 				D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */,
 				D6A443CF27841F7600AC05BB /* SceneDelegate.swift in Sources */,
