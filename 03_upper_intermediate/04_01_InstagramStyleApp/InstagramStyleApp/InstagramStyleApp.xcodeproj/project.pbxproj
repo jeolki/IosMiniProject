@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443CC27841F7600AC05BB /* AppDelegate.swift */; };
 		D6A443CF27841F7600AC05BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443CE27841F7600AC05BB /* SceneDelegate.swift */; };
-		D6A443D127841F7600AC05BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443D027841F7600AC05BB /* ViewController.swift */; };
+		D6A443D127841F7600AC05BB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443D027841F7600AC05BB /* FeedViewController.swift */; };
 		D6A443D627841F7700AC05BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A443D527841F7700AC05BB /* Assets.xcassets */; };
 		D6A443D927841F7700AC05BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6A443D727841F7700AC05BB /* LaunchScreen.storyboard */; };
 		D6A443FE2784216E00AC05BB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6A443FD2784216E00AC05BB /* SnapKit */; };
@@ -20,7 +20,7 @@
 		D6A443C927841F7600AC05BB /* InstagramStyleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramStyleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A443CC27841F7600AC05BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A443CE27841F7600AC05BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6A443D027841F7600AC05BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6A443D027841F7600AC05BB /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		D6A443D527841F7700AC05BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6A443D827841F7700AC05BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A443DA27841F7700AC05BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		D6A444012784231B00AC05BB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D6A443D027841F7600AC05BB /* ViewController.swift */,
+				D6A443D027841F7600AC05BB /* FeedViewController.swift */,
 				D6A443FF2784231700AC05BB /* TabBarController.swift */,
 			);
 			path = Scenes;
@@ -153,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6A443D127841F7600AC05BB /* ViewController.swift in Sources */,
+				D6A443D127841F7600AC05BB /* FeedViewController.swift in Sources */,
 				D6A444002784231700AC05BB /* TabBarController.swift in Sources */,
 				D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */,
 				D6A443CF27841F7600AC05BB /* SceneDelegate.swift in Sources */,

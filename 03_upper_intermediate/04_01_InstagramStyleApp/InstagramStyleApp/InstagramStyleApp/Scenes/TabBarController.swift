@@ -12,7 +12,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         // TabBar 설정
-        let feedViewController = UIViewController() // 임의
+        let feedViewController = UINavigationController(rootViewController: FeedViewController()) // 임의
         feedViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "house"),
