@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D66BE6EC278554B500FA2CF1 /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66BE6EB278554B500FA2CF1 /* ProfileDataView.swift */; };
+		D66BE6EE27855A1000FA2CF1 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66BE6ED27855A1000FA2CF1 /* ProfileCollectionViewCell.swift */; };
 		D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443CC27841F7600AC05BB /* AppDelegate.swift */; };
 		D6A443CF27841F7600AC05BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443CE27841F7600AC05BB /* SceneDelegate.swift */; };
 		D6A443D127841F7600AC05BB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A443D027841F7600AC05BB /* FeedViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D66BE6EB278554B500FA2CF1 /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		D66BE6ED27855A1000FA2CF1 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		D6A443C927841F7600AC05BB /* InstagramStyleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramStyleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A443CC27841F7600AC05BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A443CE27841F7600AC05BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				D6A44407278465D700AC05BB /* ProfileViewController.swift */,
 				D66BE6EB278554B500FA2CF1 /* ProfileDataView.swift */,
+				D66BE6ED27855A1000FA2CF1 /* ProfileCollectionViewCell.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A443D127841F7600AC05BB /* FeedViewController.swift in Sources */,
+				D66BE6EE27855A1000FA2CF1 /* ProfileCollectionViewCell.swift in Sources */,
 				D6A444052784306B00AC05BB /* UIButton+.swift in Sources */,
 				D6A444002784231700AC05BB /* TabBarController.swift in Sources */,
 				D6A443CD27841F7600AC05BB /* AppDelegate.swift in Sources */,
