@@ -60,6 +60,10 @@ final class ProfileViewController: UIViewController {
         return button
     }()
     
+    private let photoDataView = ProfileDataView(title: "게시물", count: 123)
+    private let followerDataView = ProfileDataView(title: "팔로워", count: 1111)
+    private let followingDataView = ProfileDataView(title: "팔로잉", count: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,8 +92,12 @@ private extension ProfileViewController {
         buttonStackView.spacing = 4.0 // 간격 4 유지
         buttonStackView.distribution = .fillEqually // 넓이동일
         
+        let dataStackView = UIStackView(arrangedSubviews: [photoDataView, followerDataView, followingDataView])
+        dataStackView.spacing = 4.0
+        dataStackView.distribution = .fillEqually
+        
         [
-            profileImageView, nameLabel, descriptionLabel, buttonStackView
+            profileImageView, dataStackView, nameLabel, descriptionLabel, buttonStackView
         ].forEach { view.addSubview($0) }
         
         let inset: CGFloat = 16.0
@@ -99,6 +107,12 @@ private extension ProfileViewController {
             $0.leading.equalToSuperview().inset(inset)
             $0.width.equalTo(80.0)
             $0.height.equalTo(profileImageView.snp.width)
+        }
+        
+        dataStackView.snp.makeConstraints {
+            $0.leading.equalTo(profileImageView.snp.trailing).offset(inset)
+            $0.trailing.equalToSuperview().inset(inset)
+            $0.centerY.equalTo(profileImageView.snp.centerY)
         }
         
         nameLabel.snp.makeConstraints {
