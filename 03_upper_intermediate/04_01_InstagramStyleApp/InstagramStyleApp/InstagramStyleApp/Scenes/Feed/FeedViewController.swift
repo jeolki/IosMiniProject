@@ -26,6 +26,7 @@ class FeedViewController: UIViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = .photoLibrary
         imagePickerController.allowsEditing = true
+        imagePickerController.delegate = self
         
         return imagePickerController
     }()
@@ -50,6 +51,29 @@ extension FeedViewController: UITableViewDataSource {
         cell?.setup()
         
         return cell ?? UITableViewCell()
+    }
+}
+
+extension FeedViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // 이미지를 선택하고 확인을 눌렀을 떄 작동
+        var selectImage: UIImage?
+        
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            selectImage = editedImage
+        } else if let originImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            selectImage = originImage
+        }
+        
+        print(selectImage)
+        
+        picker.dismiss(animated: true) { [weak self] in
+            let uploadViewController = UploadViewController()
+            let navigationController = UINavigationController(rootViewController: uploadViewController)
+            navigationController.modalPresentationStyle = .fullScreen
+            
+            self?.present(navigationController, animated: true)
+        }
     }
 }
 
