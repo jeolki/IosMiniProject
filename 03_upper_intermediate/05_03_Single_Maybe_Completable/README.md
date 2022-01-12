@@ -33,3 +33,5 @@ Traits란 UI처리에 특화된 Observable이라고 할 수 있습니다. Traits
 - 어느 element도 방출하지 않고 에러나 완료만 가능한 Observable의 변형입니다.
 - 어떠한 operation의 성공적인 완료여부만 알고싶을 경우 사용할 수 있습니다. (예: 데이터 저장 성공여부)
 - Single, Maybe와 다르게 Observable을 Completable로 바꿀 수 없습니다.
+- 어떠한 값을 방출하지 않습니다.
+-  완료가 되었는지 안되었는지만 알고 싶을 때 사용할 수 있습니다.
