@@ -26,6 +26,7 @@
 		D69C0F0127ABD235001F56BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69C0F0427ABD235001F56BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D69C0F0627ABD235001F56BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6C3074727AD262A007C96B0 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		D69C0EEC27ABD234001F56BD = {
 			isa = PBXGroup;
 			children = (
+				D6C3074727AD262A007C96B0 /* CombiningOperators.playground */,
 				D69C0EF727ABD234001F56BD /* CombiningOperators */,
 				D69C0EF627ABD234001F56BD /* Products */,
 			);
